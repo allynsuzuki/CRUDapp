@@ -1,0 +1,97 @@
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
+</head>
+<body>
+
+<style>
+body{
+  text-align: center;
+  font-family: 'Actor'
+}
+
+@import "compass/css3";
+
+@import "compass/css3/transform";
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+body {
+
+ background-color: #bad1c8;
+}
+
+.wrap {
+  padding: 1;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 5em;
+  white-space: nowrap;
+  font-size: 5vw;
+  z-index: 1000;
+  font-family: 'Bangers', cursive;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7);
+  @include skew(0, -6.7deg, false);
+  @include transition-property(font-size);
+  @include transition-duration(0.5s);
+
+}
+
+#submit{
+  padding: 1em
+}
+
+</style>
+
+<div class="wrap">
+  <h1>Monkey Details</h1>
+</div>
+
+
+<form action="/editSubmit" method="post">
+  <input type="hidden" name="oldName" value="<%= monkeyDetails.name %>">
+
+  <div id="monkPhoto"><img src = "<%= monkeyDetails.photo %>" height = 200 ></div>
+
+  <div id="monkName">Monkey Name<br>
+  <input style="  width: 25%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px;
+   border-radius: 4px;
+   font-size:15px"
+    border-radius: 4px;" type="text" size="35" name="name" value = "<%= monkeyDetails.name %>"><br>
+  </div>
+
+  <div id="monkLocation">Location<br>
+  <input style="  width: 25%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px;
+   border-radius: 4px;
+   font-size:15px"
+    border-radius: 4px;" type="text" size="35" name="location" value = "<%= monkeyDetails.location %>"><br>
+  </div>
+
+  <div id="monkFood">Food<br>
+  <input style="  width: 25%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px;
+   border-radius: 4px;
+   font-size:15px"
+    border-radius: 4px;" type="text" size="35" name="food" value = "<%= monkeyDetails.food %>"><br>
+  </div>
+
+<div id = "submit"><input id="button" style = "color:black;" type="submit" value="EDIT MONKEY"></div>
+
+</form>
+
+
+</body>
+</html>

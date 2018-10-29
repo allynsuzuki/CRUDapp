@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
+<style>
+
+body{
+   text-align: center;
+   font-family: "Trebuchet MS";
+}
+table{
+  border-collapse: collapse;
+}
+#monkName, #monkFood, #monkLocation{
+  display: inline-block;
+}
+#monkName{
+  border-radius: 25px;
+    background:#c299ff;
+    padding: 20px;
+    width: 225px;
+    height: 125px;
+
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+}
+
+#monkName:hover {
+    transform: scale(1.25);
+}
+#monkFood{
+  border-radius: 25px;
+     background: #008000;
+     padding: 20px;
+     width: 225px;
+     height: 125px;
+
+     transition: transform .2s; /* Animation */
+     margin: 0 auto;
+}
+
+#monkFood:hover {
+    transform: scale(1.25);
+}
+
+#monkLocation{
+  border-radius: 25px;
+   background: #cc9900;
+   padding: 20px;
+   width: 225px;
+   height: 125px;
+
+   transition: transform .2s; /* Animation */
+   margin: 0 auto;
+}
+
+#monkLocation:hover {
+    transform: scale(1.25);
+}
+
+#button{
+  border-radius: 4px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  font-size: 12px;
+}
+
+#button:hover {
+    background-color: black;
+    color: white;
+}
+#submit{
+ padding: 20px;
+}
+
+
+#monkeys th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: darkgrey;
+    color: white;
+}
+#monkeys{
+    font-family: 'Actor'
+}
+
+#monkeys tr{
+  background-color: white
+
+}
+
+#monkeys tr:hover {
+  background-color: #cecece;}
+
+
+  @import url(https://fonts.googleapis.com/css?family=Lato:900);
+  :before, :after{
+    box-sizing:border-box;
+  }
+  :before{
+    box-sizing: border-box;
+  }
+  :after{
+    box-sizing: border-box;
+  }
+  :{
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Lato', sans-serif;
+      ;
+  }
+  div.foo{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .letter{
+    display: inline-block;
+    font-weight: 900;
+    font-size: 4em;
+    margin: 0.2em;
+    position: relative;
+    color: #b7a200;
+    transform-style: preserve-3d;
+    perspective: 400;
+    z-index: 1;
+  }
+  .letter:before, .letter:after{
+    position:absolute;
+    content: attr(data-letter);
+    transform-origin: top left;
+    top:0;
+    left:0;
+  }
+  .letter, .letter:before, .letter:after{
+    transition: all 0.3s ease-in-out;
+  }
+  .letter:before{
+    color: #fff;
+    text-shadow:
+      -1px 0px 1px rgba(255,255,255,.8),
+      1px 0px 1px rgba(0,0,0,.8);
+    z-index: 3;
+    transform:
+      rotateX(0deg)
+      rotateY(-15deg)
+      rotateZ(0deg);
+  }
+  .letter:after{
+    color: rgba(0,0,0,.11);
+    z-index:2;
+    transform:
+      scale(1.08,1)
+      rotateX(0deg)
+      rotateY(0deg)
+      rotateZ(0deg)
+      skew(0deg,1deg);
+  }
+  .letter:hover:before{
+    color: #elelel;
+    transform:
+      rotateX(0deg)
+      rotateY(-40deg)
+      rotateZ(0deg);
+  }
+  .letter:hover:after{
+    transform:
+      scale(1.08,1)
+      rotateX(0deg)
+      rotateY(40deg)
+      rotateZ(0deg)
+      skew(0deg,22deg);
+  }
+}
+
+
+</style>
+
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h1></h1>
+
+
+<body style = "background-color:lightgrey;" background = "background.jpg";>
+
+  <div class="foo">
+    <span class="letter" data-letter="M">M</span>
+    <span class="letter" data-letter="O">O</span>
+    <span class="letter" data-letter="N">N</span>
+    <span class="letter" data-letter="K">K</span>
+    <span class="letter" data-letter="E">E</span>
+    <span class="letter" data-letter="Y">Y</span>
+    <span class="letter" data-letter=""> </span>
+    <span class="letter" data-letter="W">W</span>
+    <span class="letter" data-letter="O">O</span>
+    <span class="letter" data-letter="R">R</span>
+    <span class="letter" data-letter="L">L</span>
+    <span class="letter" data-letter="D">D</span>
+  </div>
+
+
+<form action="/formSubmit" method="post">
+  <div id="monkName">Monkey Name<br>
+  <input style ="border: 2px solid darkgreen;
+    border-radius: 4px;" type="text" size="35" name="name" placeholder="Enter Monkey Name"><br>
+    <img src="name.png" height="70">
+  </div>
+
+  <div id="monkLocation">Location<br>
+  <input style ="border: 2px solid darkgreen;
+    border-radius: 4px;" type="text" size="35" name="location" placeholder="Where does this monkey live?"><br>
+  <img src="tree.png" height="70">
+  </div>
+
+  <div id="monkFood">Food<br>
+  <input style ="border: 2px solid darkgreen;
+    border-radius: 4px;" type="text" size="35" name="food" placeholder="What does this monkey eat?"><br>
+      <img src="bananas.png" height="70">
+  </div>
+
+<div id = "submit"><input id="button" style = "color:darkorange;" type="submit" value="CREATE MONKEY"></div>
+
+
+</form>
+<div style= "font-family:'Actor'">Monkeys Currently in Monkey World</div>
+<table cellpadding="10" border="1" align="center" id="monkeys">
+  <tr>
+    <th>Monkey Name</th>
+    <th>Location</th>
+    <th>Food</th>
+    <th>Photo</th>
+    <th>Delete</th>
+    <th>Edit</th>
+  </tr>
+<% for(var i = 0; i<monkeys.length;i++) { %>
+  <tr>
+    <td><%= monkeys[i].name %></a></td>
+    <td><%= monkeys[i].location %></td>
+    <td><%= monkeys[i].food %></td>
+    <td><img src = "<%= monkeys[i].photo %>" height = 50></td>
+
+    <td><a href="/deleteMonkey/<%= monkeys[i].name %>"><button id="close" class="btn"><i class="fa fa-close"></i></button></a></td>
+  <td><a href="/editMonkey?oldName=<%= monkeys[i].name %>"><button id="edit" value="edit" class="btn"><i class="fad fa-check"></i></button></a></td>
+  </tr>
+<% } %>
+
+</table>
+
+</body>
+</html>
