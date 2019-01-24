@@ -74,6 +74,10 @@ MongoClient.connect('mongodb://asuzuki:chick3n@ds054308.mlab.com:54308/allyn-dat
     if(err) { console.log(err) }
     console.log("Connected successfully to server");
     db = client.db('allyn-database');
+
+	port = process.env.PORT || 80
+
+
     app.listen(port, () => {
         console.log('bananas')
     })
